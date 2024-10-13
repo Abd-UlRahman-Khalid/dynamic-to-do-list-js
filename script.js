@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const taskList = document.getElementById("task-list");
   const taskInput = document.getElementById("task-input");
 
-  function loadTask() {
+  function loadTasks() {
     const storedTask = JSON.parse(localStorage.getItem("tasks") || "[]");
     storedTask.forEach((taskText) => addTask(taskText, false));
   }
@@ -73,5 +73,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Load tasks from Local Storage on page load
-  loadTask();
+  loadTasks();
 });
